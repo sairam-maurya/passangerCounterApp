@@ -3,7 +3,7 @@ let count = 0;
 function increment() {
 
     count = count + 1;
-    document.getElementById("count-el").innerText = count;
+    document.getElementById("count-el").textContent = count;
     
 }
 
@@ -12,8 +12,12 @@ function increment() {
 function save(){
     let saveEl = document.getElementById("save-el")
 
-    let val = count +" "+ "-"+" " ;
-    saveEl.innerText+=val
+    let val =  count + " - " ;
+    saveEl.textContent+=val;
+
+    document.getElementById("count-el").textContent=0
+    count=0;
+
 
 }
 
